@@ -1,24 +1,27 @@
 /**
- * OOPSBannerApp - UC4: Array & Loops
+ * OOPSBannerApp - UC5: Array Initialization
+ * Combines declaration and initialization for cleaner code.
  * @author Pranav
- * @version 4.0
+ * @version 5.0
  */
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
-        // Using String.join from UC3 to maintain memory efficiency
-        String[] bannerLines = {
-            String.join(" ", "  ***", "   *** ", "****", "****"),
-            String.join(" ", " *    *", "*   *", "*  *", "* "),
-            String.join(" ", " *    *", "*   *", "*  *", "* "),
-            String.join(" ", " *    *", "*   *", "****", "****"),
-            String.join(" ", " *    *", "*   *", "* ", "     *"),
-            String.join(" ", " *    *", "*   *", "* ", "     *"),
-            String.join(" ", "  ***", "   *** ", "* ", " ****")
+        // UC5: Streamlined Array Initialization
+        // We declare and fill the array in one single, compact statement
+        String[] bannerLines = new String[] {
+            String.join(" ", "  ***", "  *** ", " ****", "  ****"),
+            String.join(" ", " *   *", "*   *", "*     *", "* "),
+            String.join(" ", " *   *", "*   *", "*     *", "* "),
+            String.join(" ", " *   *", "*   *", "* ***", "  ****"),
+            String.join(" ", " *   *", "*   *", "* ", "        *"),
+            String.join(" ", " *   *", "*   *", "* ", "        *"),
+            String.join(" ", "  ***", "  *** ", "* ", "     ****")
         };
 
-        // 2. Looping Structure: Using an enhanced for-loop for cleaner output
+        // Efficient traversal using the enhanced for-loop
         for (String line : bannerLines) {
             System.out.println(line);
+        }
     }
 }
