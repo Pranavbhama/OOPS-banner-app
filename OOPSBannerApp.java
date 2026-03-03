@@ -1,44 +1,24 @@
 /**
- * OOPSBannerApp - UC3: Memory Efficient Banner
- * Uses String.join() to construct the banner lines.
+ * OOPSBannerApp - UC4: Array & Loops
  * @author Pranav
- * @version 3.0
+ * @version 4.0
  */
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
+        // Using String.join from UC3 to maintain memory efficiency
+        String[] bannerLines = {
+            String.join(" ", "  ***", "   *** ", "****", "****"),
+            String.join(" ", " *    *", "*   *", "*  *", "* "),
+            String.join(" ", " *    *", "*   *", "*  *", "* "),
+            String.join(" ", " *    *", "*   *", "****", "****"),
+            String.join(" ", " *    *", "*   *", "* ", "     *"),
+            String.join(" ", " *    *", "*   *", "* ", "     *"),
+            String.join(" ", "  ***", "   *** ", "* ", " ****")
+        };
 
-        // UC3: Using String.join() to manage memory efficiency
-        // Syntax: String.join("delimiter", "part1", "part2", ...)
-
-        System.out.println(String.join("   ",
-                " ***** ",
-                " ***** ",
-                " ******",
-                " ***** "));
-
-        System.out.println(String.join("   ",
-                "*     *",
-                "*     *",
-                "*     *",
-                "*      "));
-
-        System.out.println(String.join("   ",
-                "*     *",
-                "*     *",
-                " ******",
-                " ***** "));
-
-        System.out.println(String.join("   ",
-                "*     *",
-                "*     *",
-                "*      ",
-                "      *"));
-
-        System.out.println(String.join("   ",
-                " ***** ",
-                " ***** ",
-                "*      ",
-                " ***** "));
+        // 2. Looping Structure: Using an enhanced for-loop for cleaner output
+        for (String line : bannerLines) {
+            System.out.println(line);
     }
 }
